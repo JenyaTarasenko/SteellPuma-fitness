@@ -1,0 +1,898 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block content %}<!-- ------------------блок1---------------------- -->
+<!-- Блок 1 дестоп -->
+<section class="hidden md:flex relative min-h-screen bg-cover bg-center"
+    style="background-image: url('/static/image/price.webp');">
+
+    <!-- затемнение -->
+    <div class="absolute inset-0 bg-black/20"></div>
+
+    <!-- контент -->
+    <div class="relative z-10 flex items-center w-full px-16">
+
+        <!-- текст слева -->
+        <div class="max-w-2xl text-white">
+            <div class="flex flex-row flex-wrap items-center mb-8 gap-4">
+                <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
+                <p class="text-sm font-normal font-manrope text-white">фітнес-клуб<span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+            </div>
+            <div x-data="{ show: false }"
+                x-init="setTimeout(() => show = true, 200)">
+
+                <h1 
+                    x-show="show"
+                    x-transition:enter="transition-all ease-in-out duration-1000"
+                    x-transition:enter-start="opacity-0 translate-y-10 blur-sm"
+                    x-transition:enter-end="opacity-100 translate-y-0 blur-0"
+                    class="text-9xl font-bold leading-tight mb-6 font-manrope">
+
+                    Наші<br><span class="text-[#5ACAFA] font-light">ціни</span>
+                </h1>
+
+            </div>
+
+
+            <h2 class="text-lg text-gray-100 mb-8 font-manrope max-w-md font-light">
+                Комфортні умови та чесні<br>ціни для кожного <br>хто займається у нас
+            </h2>
+
+            <div class="flex flex-row flex-wrap gap-5">
+               <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+
+                    <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="#" class="inline-flex items-center justify-center border border-[#5ACAFA] text-[#5ACAFA] rounded-full px-6 py-3 hover:bg-white hover:text-black transition w-[200px] hover:drop-shadow-[0_0_10px_#5ACAFA]">
+
+                    <span class="font-medium text-center">
+                        Ціни
+                    </span>
+
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Блок 1 дестоп -->
+
+<!-- Блок 1 мобайл -->
+ <section class="block md:hidden relative min-h-screen bg-cover bg-center"
+  style="background-image: url('/static/image/price-mob.webp');">
+
+  <!-- затемнение -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- контент -->
+  <div class="relative z-10 w-full px-16 text-left text-white p-10">
+    <div class="flex flex-row flex-wrap items-center mb-8 gap-4 mt-10">
+        <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
+        <p class="text-sm font-normal font-manrope text-white"><span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+    </div>
+    <div x-data="{ show: false }"
+        x-init="setTimeout(() => show = true, 200)">
+
+        <h1 
+            x-show="show"
+            x-transition:enter="transition-all ease-in-out duration-1000"
+            x-transition:enter-start="opacity-0 translate-y-10 blur-sm"
+            x-transition:enter-end="opacity-100 translate-y-0 blur-0"
+            class="text-6xl font-bold leading-tight mb-6 font-manrope">
+
+            Наші<br><span class="text-[#5ACAFA] font-light">ціни</span>
+        </h1>
+
+    </div>
+
+
+     <h2 class="text-xl text-gray-100 mb-8 font-manrope max-w-md font-light">
+        Комфортні умови <br> та чесні ціни для кожного хто займається у нас
+     </h2>
+
+                <div class="flex flex-row flex-wrap gap-5">
+                    <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+
+                    <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                    </a>
+
+                    <a href="#" class="inline-flex items-center justify-center border border-[#5ACAFA] text-[#5ACAFA] rounded-full px-6 py-3 hover:bg-white hover:text-black transition w-[200px]">
+
+                        <span class="font-medium text-center">
+                            Ціни
+                        </span>
+
+                    </a>
+
+                </div>
+
+  </div>
+
+</section>
+<!-- Блок 1 мобайл -->
+<!-- ------------------блок1---------------------- -->
+<!-- ------------------блок2---------------------- -->
+<!-- блок текст по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <h4 class="text-2xl sm:text-3xl font-normal leading-tight font-manrope text-center text-white uppercase">Тренажерна <br><span class="text-[#5ACAFA] font-bold text-2xl sm:text-5xl">зала</span></h4>
+</section>
+<!-- блок текст по середире -->
+<!-- ------------------блок2---------------------- -->
+ <!-- ------------------блок3 карты---------------------- -->
+<section class="py-20 px-10">
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-fit mx-auto">
+        <!-- card 1-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">1</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    Разове<br>відвідування
+                </h3>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[150px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    200 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 2-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">2</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    Безлімітний абонемент<br><span class="font-light">[ 1 місяць ]</span>
+                </h3>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[127px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    1700 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 3-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">3</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+
+                    Абонемент 10 занять <br><span class="font-light">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ з 7.00 до 16.00 ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[105px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    850 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 4-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">4</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    Абонемент 10 занять<br><span class="font-light">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ з 7.00 до 16.00 ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[105px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    950 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+          <!-- card 5-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">5</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    Безлімітний абонемент<br><span class="font-light">[ 3 місяці ]</span>
+                </h3>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[150px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    3600 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 2 тижні поспіль ]</p>
+
+            </div>
+
+        </div>
+        <!-- card 6-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">6</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    Безлімітний абонемент<br><span class="font-light">[ 6 місяців ]</span>
+                </h3>
+                
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[140px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    6700 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 4 тижні поспіль або: 2х2 тижні поспіль ]</p>
+
+            </div>
+
+        </div>
+        <!-- card 7-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">7</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+
+                    АБезлімітний абонемент<br><span class="font-light">[ 12 місяців ]</span>
+                </h3>
+              
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[140px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    12500 <span class="text-sm">грн</span>
+                </h4>
+                <p class="text-white text-xs font-normal leading-tight mt-2">[ 6 тижнів поспіль або: 3х2 тижні поспіль ]</p>
+
+            </div>
+
+        </div>
+        <!-- card 8-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">8</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-lg font-bold leading-tight uppercase font-montserrat">
+                    Разове персональне заняття 
+                </h3>
+                <p class="text-white text-xs font-normal leading-tight mt-2">[ тренування у міні групах 2-3 людини з тренером спліт]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    600 <span class="text-sm">грн</span>
+                </h4>
+               <p class="text-white text-xs font-normal leading-tight mt-2">[ у разі спліт-тренування: 2 людини ]</p>
+
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    540 <span class="text-sm">грн</span>
+                </h4>
+               <p class="text-white text-xs font-normal leading-tight mt-2">[ у разі спліт-тренування: 3 людини ]</p>
+
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    480 <span class="text-sm">грн</span>
+                </h4>
+               <p class="text-white text-xs font-normal leading-tight mt-2">[ вказана вартість з 1 людину ]</p>
+
+            </div>
+
+        </div>
+         <!-- card 9-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">9</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+
+                    Абонемент <br><span class="font-light text-sm ">[  6 персональних занят  ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ або тренувань у міні групах (2-3 людини) з тренером (спліт), на 1 місяць]</p>
+              
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    3400 <span class="text-sm">грн</span>
+                </h4>
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    3000 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ спліт-тренування 2 людини ]</p>
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    3400 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 3 людини - 2 700 грн вказана вартість з 1 людини ]</p>
+            </div>
+
+        </div>
+        <!-- card 10-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">10</span>
+            </div>
+             <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+
+                    Абонемент <br><span class="font-light text-sm ">[  8 персональних занят  ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ або тренувань у міні групах (2-3 людини) з тренером (спліт), на 1 місяць]</p>
+              
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    4300 <span class="text-sm">грн</span>
+                </h4>
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    3800 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ спліт-тренування 2 людини ]</p>
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    3400 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 3 людини - 23400 грн. вказана вартість з 1 людини ]</p>
+            </div>
+        </div>
+         <!-- card 11-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">12</span>
+            </div>
+
+               <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+
+                    Абонемент <br><span class="font-light text-sm ">[  8 персональних занят  ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ або тренувань у міні групах (2-3 людини) з тренером (спліт), на 1 місяць]</p>
+              
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    6100 <span class="text-sm">грн</span>
+                </h4>
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    5300 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ спліт-тренування 2 людини ]</p>
+            </div>
+            <div class="mt-[10px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight uppercase">
+                    4900 <span class="text-sm">грн</span>
+                </h4>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 3 людини вказана вартість з 1 людини ]</p>
+            </div>
+
+        </div>
+        <!-- card 12-->
+        <div class="w-[250px] h-[550px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">12</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-lg font-bold leading-tight uppercase font-montserrat">
+                    Абонемент 10 занять <br><span class="font-light text-sm ">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-xs font-normal leading-tight mt-2">[ персональні заняття або спліт ]</p>
+
+            </div>
+            <div class="mt-[200px] text-center">
+
+                
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[+ 450 грн. за кожне персональне заняття у разі спліт-тренування: 2 людини - 410 грн.; 3 людини - 380 грн. вказана вартість з 1 людини ]</p>
+            </div>
+ 
+        </div>
+    
+    </div>
+
+</section>
+<!-- ------------------блок3 карты---------------------- -->
+ <!-- блок кнопка  по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+          <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+    </a>
+   
+</section>
+<!-- блок кнопка  по середире -->
+ <!-- блок текст по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <h4 class="text-2xl sm:text-3xl font-normal leading-tight font-manrope text-center text-white uppercase">Групові<br><span class="text-[#5ACAFA] font-bold text-2xl sm:text-5xl">тренування</span></h4>
+</section>
+<!-- блок текст по середире -->
+  <!-- ------------------блок3 карты---------------------- -->
+<section class="py-20 px-10">
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-fit mx-auto">
+        <!-- card 1-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">1</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    Разове<br>відвідування
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ один напрямок ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    200 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 2-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">2</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    12 занять<br><span class="font-light text-sm">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ один напрямок ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2300 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 3-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">3</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    10 занять<br><span class="font-light text-sm">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ один напрямок ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2000 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+        </div>
+        <!-- card 4-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">4</span>
+            </div>
+
+             <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    8 занять<br><span class="font-light text-sm">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ один напрямок ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    1700 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+         <!-- card 5-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">5</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    Безлімітний<br>абонемент<br><span class="font-light text-sm">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ усі напрямки ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2800 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 6-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">6</span>
+            </div>
+
+            
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    Безлімітний<br>абонемент<br><span class="font-light text-sm">[ 1 місяць ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ усі напрямки ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2800 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <!-- card 7-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">7</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    Безлімітний абонемент<br><span class="font-light text-sm">[ 6 місяців ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ усі напрямки ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    24 300 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+        </div>
+        <!-- card 8-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">8</span>
+            </div>
+
+             <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase">
+                    Безлімітний<br>абонемент<br><span class="font-light text-sm">[ 12 місяців ]</span>
+                </h3>
+                <p class="text-white text-sm font-normal leading-tight mt-2">[ усі напрямки ]</p>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[80px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    25 100 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ------------------блок3 карты---------------------- -->
+  <!-- блок кнопка  по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+          <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+    </a>
+   
+</section>
+<!-- блок кнопка  по середире -->
+<!-- блок текст по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <h4 class="text-2xl sm:text-3xl font-normal leading-tight font-manrope text-center text-white uppercase">Комбіновані<br><span class="text-[#5ACAFA] font-bold text-2xl sm:text-5xl">абонементи</span></h4>
+</section>
+<!-- блок текст по середире -->
+
+<section class="py-20 px-10">
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-fit mx-auto">
+        <!-- card 1-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">1</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    8 групових занять<br><span class="font-normal text-sm">[  один напрямок ]</span> <br>  8 занять у тренажерному залі 
+                </h3>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[30px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2200 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+
+         <!-- card 1-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">2</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    8 групових занять<br><span class="font-normal text-sm">[  один напрямок ]</span> <br>  10 занять у тренажерному залі 
+                </h3>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[30px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2400 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+
+         <!-- card 1-->
+        <div class="w-[250px] h-[400px] rounded-[40px] border border-[#5ACAFA] bg-black p-8 flex flex-col">
+
+            <!-- кружок -->
+            <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
+                <span class="text-black text-xl font-bold">3</span>
+            </div>
+
+            <!-- текст -->
+            <div class="mt-10 text-center">
+
+                <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
+                    10 групових занять<br><span class="font-normal text-sm">[  один напрямок ]</span> <br>  8 занять у тренажерному залі 
+                </h3>
+
+            </div>
+             <!-- текст -->
+            <div class="mt-[30px] text-center">
+
+                <h4 class="text-white text-4xl font-bold leading-tight">
+                    2650 <span class="text-sm">грн</span>
+                </h4>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

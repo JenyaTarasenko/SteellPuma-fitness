@@ -9,7 +9,9 @@ def rozclad_zanatiy(request):
     
     
 
-
+def price_steel_puma(request):
+    return render(request, 'shop/product/price.html')
+    
 
 
 
