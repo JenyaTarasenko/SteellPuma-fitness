@@ -11,6 +11,9 @@ def rozclad_zanatiy(request):
 
 def price_steel_puma(request):
     return render(request, 'shop/product/price.html')
+
+def team(request):
+       return render(request, 'shop/product/team.html')
     
 
 

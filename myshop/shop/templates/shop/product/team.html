@@ -1,0 +1,423 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- ------------------блок1---------------------- -->
+<!-- Блок 1 дестоп -->
+<section class="hidden md:flex relative min-h-screen bg-cover bg-center"
+    style="background-image: url('/static/image/team.webp');">
+
+    <!-- затемнение -->
+    <div class="absolute inset-0 bg-black/20"></div>
+
+    <!-- контент -->
+    <div class="relative z-10 flex items-center w-full px-16">
+
+        <!-- текст слева -->
+        <div class="max-w-2xl text-white">
+            <div class="flex flex-row flex-wrap items-center mb-8 gap-4">
+                <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
+                <p class="text-sm font-normal font-manrope text-white">фітнес-клуб<span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+            </div>
+            <div x-data="{ show: false }"
+                x-init="setTimeout(() => show = true, 200)">
+
+                <h1 
+                    x-show="show"
+                    x-transition:enter="transition-all ease-in-out duration-1000"
+                    x-transition:enter-start="opacity-0 translate-y-10 blur-sm"
+                    x-transition:enter-end="opacity-100 translate-y-0 blur-0"
+                    class="text-9xl font-bold leading-tight mb-6 font-manrope">
+
+                    Наші<br><span class="text-[#5ACAFA] font-light">тренери</span>
+                </h1>
+
+            </div>
+
+
+            <h2 class="text-lg text-gray-100 mb-8 font-manrope max-w-md font-light">
+                Створюйте тіло своєї мрії<br>разом із професійними тренерами
+            </h2>
+
+            <div class="flex flex-row flex-wrap gap-5">
+               <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+
+                    <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="#" class="inline-flex items-center justify-center border border-[#5ACAFA] text-[#5ACAFA] rounded-full px-6 py-3 hover:bg-white hover:text-black transition w-[200px] hover:drop-shadow-[0_0_10px_#5ACAFA]">
+
+                    <span class="font-medium text-center">
+                        Ціни
+                    </span>
+
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Блок 1 дестоп -->
+
+<!-- Блок 1 мобайл -->
+ <section class="block md:hidden relative min-h-screen bg-cover bg-center"
+  style="background-image: url('/static/image/team-mob.webp');">
+
+  <!-- затемнение -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- контент -->
+  <div class="relative z-10 w-full px-16 text-left text-white p-10">
+    <div class="flex flex-row flex-wrap items-center mb-8 gap-4 mt-10">
+        <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
+        <p class="text-sm font-normal font-manrope text-white"><span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+    </div>
+    <div x-data="{ show: false }"
+        x-init="setTimeout(() => show = true, 200)">
+
+        <h1 
+            x-show="show"
+            x-transition:enter="transition-all ease-in-out duration-1000"
+            x-transition:enter-start="opacity-0 translate-y-10 blur-sm"
+            x-transition:enter-end="opacity-100 translate-y-0 blur-0"
+            class="text-6xl font-bold leading-tight mb-6 font-manrope">
+
+            Наші<br><span class="text-[#5ACAFA] font-light text-5xl ">тренери</span>
+        </h1>
+
+    </div>
+
+
+     <h2 class="text-xl text-gray-100 mb-8 font-manrope max-w-md font-light">
+         Створюйте тіло своєї мрії разом із професійними тренерами
+     </h2>
+
+                <div class="flex flex-row flex-wrap gap-5">
+                    <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+
+                    <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                    </a>
+
+                    <a href="#" class="inline-flex items-center justify-center border border-[#5ACAFA] text-[#5ACAFA] rounded-full px-6 py-3 hover:bg-white hover:text-black transition w-[200px]">
+
+                        <span class="font-medium text-center">
+                            Ціни
+                        </span>
+
+                    </a>
+
+                </div>
+
+  </div>
+
+</section>
+<!-- Блок 1 мобайл -->
+<!-- ------------------блок1---------------------- -->
+ <!-- блок текст по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2 mb-10">
+    <h4 class="text-2xl sm:text-3xl font-normal leading-tight font-manrope text-center text-white uppercase">Професійна тренерська<br><span class="text-[#5ACAFA] font-bold text-2xl sm:text-5xl">команда</span></h4>
+</section>
+<!-- блок текст по середире -->
+ 
+<!-- ------------------блок2 карты---------------------- -->
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-2xl mx-auto px-4 place-items-center">
+    <!-- card 1 -->
+    <div class="flex flex-col items-start text-left max-w-[300px]">
+
+        <!-- image -->
+        <img src="/static/image/team1.webp" 
+            alt="card"
+            class="w-full h-[300px] object-cover" loading="lazy">
+
+        <!-- content -->
+        <div class="text-white">
+
+            <h3 class="text-xl font-bold mb-2 mt-2 text-[#5ACAFA]">
+                 Андрій Іванченко
+            </h3>
+
+            <p class="text-sm  leading-relaxed font-manrope font-light">
+                Тренер тренажерної зали.<br>Персональний тренер
+            </p>
+
+        </div>
+
+    </div>  
+    <!-- card2 -->
+     <div class="flex flex-col items-start text-left max-w-[300px]">
+
+        <!-- image -->
+        <img src="/static/image/team2.webp" 
+            alt="card"
+            class="w-full h-[300px] object-cover">
+
+         <!-- content -->
+        <div class="text-white">
+
+            <h3 class="text-xl font-bold mb-2 mt-2 text-[#5ACAFA]">
+                Яна Снісаренко
+            </h3>
+
+            <p class="text-sm  leading-relaxed font-manrope font-light">
+                Хелс-коуч<br><a href="https://www.instagram.com/yana_saren?igsh=cXhtazRuZXp1M2xu" class="text-[#5ACAFA]">Instagram</a>
+            </p>
+
+        </div>
+    </div> 
+    <!-- card3 -->
+    <div class="flex flex-col items-start text-left max-w-[300px]">
+
+        <!-- image -->
+        <img src="/static/image/team3.webp" 
+            alt="card"
+            class="w-full h-[300px] object-cover" loading="lazy">
+
+        <!-- content -->
+        <div class="text-white">
+
+            <h3 class="text-xl font-bold mb-2 mt-2 text-[#5ACAFA]">
+                Сергій Бахмутський
+            </h3>
+
+            <p class="text-sm  leading-relaxed font-manrope font-light">
+                Тренер тренажерної зали.<br>Персональний тренер
+            </p>
+
+        </div>
+
+    </div>  
+    <!-- card4 -->
+    <div class="flex flex-col items-start text-left max-w-[300px]">
+
+        <!-- image -->
+        <img src="/static/image/team4.webp" 
+            alt="card"
+            class="w-full h-[300px] object-cover" loading="lazy">
+
+         <!-- content -->
+        <div class="text-white">
+
+            <h3 class="text-xl font-bold mb-2 mt-2 text-[#5ACAFA]">
+                Ольга Дружиніна
+            </h3>
+
+            <p class="text-sm  leading-relaxed font-manrope font-light">
+                Тренер групових програм.<br>Персональний тренер
+            </p>
+
+        </div>
+    </div> 
+
+</div>
+<!-- ОДНА КАРТОЧКА розкрываем -->
+<div class="flex justify-center mt-10">
+      <!-- card 1 -->
+    <div class="flex flex-col items-start text-left max-w-[300px]">
+
+        <!-- image -->
+        <img src="/static/image/team5.webp" 
+            alt="card"
+            class="w-full h-[300px] object-cover" loading="lazy">
+
+        <!-- content -->
+        <div class="text-white">
+
+            <h3 class="text-xl font-bold mb-2 mt-2 text-[#5ACAFA]">
+                Маргарита Гелевера
+            </h3>
+
+            <p class="text-sm  leading-relaxed font-manrope font-light">
+                Тренер тренажерної зали.<br>Персональний тренер
+            </p>
+
+        </div>
+
+    </div>  
+</div>
+<!-- ------------------блок3 карты---------------------- -->
+<!-- ------------------бло3 ---------------------- -->
+
+<!-- блок кнопка  по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA]">
+          <!-- текст -->
+                    <span class="font-medium pl-8 font-manrope font-medium ">
+                        Записатись
+                    </span>
+
+                    <!-- чёрный круг со стрелкой -->
+                    <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+    </a>
+   
+</section>
+<!-- блок кнопка  по середире -->
+
+<!-- блок текст по середире --> 
+<section  class="flex justify-center items-center py-10 mt-10 p-2">
+    <h4 class="text-3xl sm:text-4xl font-normal leading-tight font-manrope text-center text-white uppercase">Спонсори<br><span class="text-[#5ACAFA] font-bold text-4xl sm:text-5xl">Сталева Пума</span></h4>
+</section>
+<!-- блок текст по середире -->
+
+<!-- ------------------блок4---------------------- -->
+<!-- Блок 1 дестоп -->
+<section class="hidden md:flex relative min-h-screen bg-cover bg-center items-center justify-center"
+    style="background-image: url('/static/image/team-top-des.webp');">
+
+    <!-- затемнение -->
+    <div class="absolute inset-0 bg-black/60"></div>
+    <!-- текст -->
+    <div class="flex flex-row flex-wrap mb-8 max-w-8xl z-10 gap-10 items-center justify-center">
+            <!-- card 1 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+            <!-- image -->
+            <img src="/static/image/sponsor1.webp" 
+                alt="card"
+                class="max-w-[300px] h-[200px]  object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+                    Працюємо з 2001 року. Найбільший в Україні асортимент відновлених тренажерів найкращіх світових виробників: Precor, Texnogym, Life fitness, Cubex, Star trac. Пропонуємо продажу вживаних тренажерів у лізинг, що є унікальною послугою для ринку України.
+                </p>
+
+            </div>
+
+        </div>  
+        <!-- card2 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+            <!-- image -->
+            <img src="/static/image/sponsor2.webp" 
+                alt="card"
+                class="max-w-[300px] h-[200px] object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[27px]">
+                    Fitnessport - український інтернет-магазин, що спеціалізується на продажу всіх видів тренажерів та обладнання відомих зарубіжних та українських брендів: BODYSOLID, HOIST, STAR TRAC, PRECOR , MATRIX, NAUTILUS, INTER ATLETICA.
+                </p>
+
+            </div>
+        </div> 
+        <!-- card3 -->
+          <!-- card2 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+            <!-- image -->
+            <img src="/static/image/sponsor3.webp" 
+                alt="card"
+                class="max-w-[350px] h-[200px] object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+                    GumOK — український виробник якісної гумової плитки, створеної за технологією холодного пресування. Ми виготовляємо покриття з екологічно переробленої гумової крихти, що забезпечує високу міцність, амортизацію та довговічність у спортивному й побутовому використанні.
+                </p>
+            </div>
+        </div> 
+        <!-- card3 -->
+    </div>
+</section>
+<!-- Блок 1 дестоп -->
+<!-- Блок 1 мобайл -->
+<section class="block md:hidden relative min-h-screen bg-cover bg-center flex items-center justify-center mt-10"
+  style="background-image: url('/static/image/team-top-mob.webp');">
+
+    <!-- затемнение -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+     <!-- текст -->
+    <div class="flex flex-col flex-wrap mb-8 max-w-lg z-10 gap-20 items-center justify-centerz p-5">
+            <!-- card 1 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+            <!-- image -->
+            <img src="/static/image/sponsor1.webp" 
+                alt="card"
+                class="max-w-[300px] h-[200px]  object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+                    Працюємо з 2001 року. Найбільший в Україні асортимент відновлених тренажерів найкращіх світових виробників: Precor, Texnogym, Life fitness, Cubex, Star trac. Пропонуємо продажу вживаних тренажерів у лізинг, що є унікальною послугою для ринку України.
+                </p>
+
+            </div>
+
+        </div>  
+        <!-- card2 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+            <!-- image -->
+            <img src="/static/image/sponsor2.webp" 
+                alt="card"
+                class="max-w-[300px] h-[200px] object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[27px]">
+                    Fitnessport - український інтернет-магазин, що спеціалізується на продажу всіх видів тренажерів та обладнання відомих зарубіжних та українських брендів: BODYSOLID, HOIST, STAR TRAC, PRECOR , MATRIX, NAUTILUS, INTER ATLETICA.
+                </p>
+
+            </div>
+        </div> 
+        <!-- card3 -->
+          <!-- card2 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+            <!-- image sm:max-w-[350px] sm:h-[200px]-->
+            <img src="/static/image/sponsor3.webp" 
+                alt="card"
+                class="sm:max-w-[350px] sm:h-[200px] max-w-[300px] h-[120px] object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+                    GumOK — український виробник якісної гумової плитки, створеної за технологією холодного пресування. Ми виготовляємо покриття з екологічно переробленої гумової крихти, що забезпечує високу міцність, амортизацію та довговічність у спортивному й побутовому використанні.
+                </p>
+            </div>
+        </div> 
+        <!-- card3 -->
+    </div>
+
+    
+
+</section>
+<!-- Блок 1 мобайл -->
+
+{% endblock %}
