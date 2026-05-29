@@ -66,6 +66,7 @@
             }
         }
     </script>
+
 </head>
 <!-- цвет всего текста бэкграунд -->
 
@@ -74,7 +75,73 @@
     {% comment %} {% include 'include/menu.html' %} {% endcomment %}
     {% block content %}
     {% endblock %}
+    <!-- подключение видео galery.hrml -->
+    <!-- <script>
+        function setupVideo(videoId, buttonId) {
+            const video = document.getElementById(videoId);
+            const button = document.getElementById(buttonId);
+
+            if (!video || !button) return;
+
+            button.addEventListener('click', () => {
+                video.play();
+                button.style.display = 'none';
+            });
+
+            video.addEventListener('pause', () => {
+                button.style.display = 'flex';
+            });
+        }
+
+        setupVideo('video1', 'playButton1');
+        setupVideo('video2', 'playButton2');
+        setupVideo('video3', 'playButton3');
+        setupVideo('video4', 'playButton4');
+    </script> -->
+    <script>
+    document.querySelectorAll('.video-box').forEach((box) => {
+
+        const video = box.querySelector('.video');
+        const button = box.querySelector('.play-btn');
+
+        let isPlaying = false;
+
+        button.addEventListener('click', () => {
+
+            if (!isPlaying) {
+                video.play();
+                button.style.display = 'none';
+                isPlaying = true;
+            } else {
+                video.pause();
+                button.style.display = 'flex';
+                isPlaying = false;
+            }
+
+        });
+
+        video.addEventListener('click', () => {
+
+            if (!isPlaying) {
+                video.play();
+                button.style.display = 'none';
+                isPlaying = true;
+            } else {
+                video.pause();
+                button.style.display = 'flex';
+                isPlaying = false;
+            }
+
+        });
+
+        video.addEventListener('ended', () => {
+            isPlaying = false;
+            button.style.display = 'flex';
+        });
+
+    });
+    </script>
+     <!-- подключение видео galery.hrml -->
 </body>
 
 </html>
-<!-- цвет всего текста бэкграунд -->

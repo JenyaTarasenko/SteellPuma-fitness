@@ -9,4 +9,6 @@ urlpatterns = [
     path('rozclad-zanatiy/', views.rozclad_zanatiy, name='rozclad-zanatiy'),# страница расписаните занятий 
     path('price-steel-puma/', views.price_steel_puma, name='price-steel-puma'),# страниц цены клуба
     path('team-steel-puma/', views.team, name='team-steel-puma'),# команда фитнес клуба 
+    path('galery-steel-puma/', views.galery, name='galery-steel-puma'),#галерея фитнес клуба 
+
 ]
