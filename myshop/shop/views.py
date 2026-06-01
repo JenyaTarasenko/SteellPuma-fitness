@@ -18,6 +18,10 @@ def team(request):
 def galery(request):
     return render(request, 'shop/product/galery.html')
 
+
+def rules(request):
+    return render(request, 'shop/product/rules.html')
+
     
 
 
