@@ -11,5 +11,7 @@ urlpatterns = [
     path('team-steel-puma/', views.team, name='team-steel-puma'),# команда фитнес клуба 
     path('galery-steel-puma/', views.galery, name='galery-steel-puma'),#галерея фитнес клуба 
     path('rules-steel-puma/', views.rules, name='rules-steel-puma'),#галерея фитнес клуба
+    path('news-steel-puma/', views.news, name='news-steel-puma'),#галерея фитнес клуба
+    
 
 ]

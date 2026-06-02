@@ -22,6 +22,9 @@ def galery(request):
 def rules(request):
     return render(request, 'shop/product/rules.html')
 
+def news(request):
+    return render(request, 'shop/product/news.html')
+
     
 
 
