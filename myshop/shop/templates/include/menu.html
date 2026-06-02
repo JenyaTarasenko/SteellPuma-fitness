@@ -1,0 +1,78 @@
+{% load static %}
+
+<nav class="bg-black/90 fixed top-0 left-0 w-full z-50">
+
+    <div class="px-5">
+        <div class="flex justify-between h-16 items-center">
+
+            <!-- LOGO -->
+            <a href="/">
+                <img src="{% static 'image/logo.svg' %}" alt="logo-home" loading="eager" class="cursor-pointer w-20 sm:ml-10 pl-0">
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <div class="hidden md:flex flex-1 justify-center items-center relative space-x-6">
+                <a href="/" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Головна</a>
+                <a href="{% url 'shop:galery-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Галерея</a>
+                <a href="{% url 'shop:price-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Ціни</a>
+                <a href="{% url 'shop:rozclad-zanatiy' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Розклад</a>
+                <a href="{% url 'shop:news-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Новини</a>
+                <a href="{% url 'shop:team-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Команда</a>
+                <a href="{% url 'shop:rules-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Правила</a>    
+            </div>
+
+            <!-- BURGER BUTTON -->
+               <!-- Бургер меню -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="relative w-8 h-8 flex flex-col justify-between items-center p-2 text-[#5ACAFA] hover:text-[#5ACAFA] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+
+                        <!-- Линии бургера -->
+                        <span
+                            class="block w-8 h-0.5 bg-current transform transition duration-300 ease-in-out origin-center"></span>
+                        <span
+                            class="block w-8 h-0.5 bg-current transform transition duration-300 ease-in-out origin-center"></span>
+                        <span
+                            class="block w-8 h-0.5 bg-current transform transition duration-300 ease-in-out origin-center"></span>
+                    </button>
+                </div>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+         class="hidden md:hidden px-4 py-3 space-y-6 flex flex-col bg-black/90 items-center justify-center">
+
+        <a href="/" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Головна</a>
+        <a href="{% url 'shop:galery-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Галерея</a>
+        <a href="{% url 'shop:price-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Ціни</a>
+        <a href="{% url 'shop:rozclad-zanatiy' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Розклад</a>
+        <a href="{% url 'shop:news-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Новини</a>
+        <a href="{% url 'shop:team-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Команда</a>
+        <a href="{% url 'shop:rules-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Правила</a>
+
+    </div>
+
+</nav>
+
+    <script>
+        // анимация бургера
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const lines = btn.querySelectorAll('span');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+
+                // Анимация линий
+                lines[0].classList.toggle('rotate-45');
+                lines[0].classList.toggle('translate-y-2');
+
+                lines[1].classList.toggle('opacity-0');
+
+                lines[2].classList.toggle('-rotate-45');
+                lines[2].classList.toggle('-translate-y-2');
+            });
+        });
+    </script>

@@ -69,35 +69,46 @@
 
 </head>
 <!-- цвет всего текста бэкграунд -->
-
 <body class="bg-[#000000]">
     <!-- меню ВСЕГДА будет -->
-    {% comment %} {% include 'include/menu.html' %} {% endcomment %}
+    {% include 'include/menu.html' %}
     {% block content %}
     {% endblock %}
+    {% include 'include/footer.html' %}
+      <!-- Кнопка Чат -->
+    <a href="https://t.me/username"
+        target="_blank"
+        class="fixed bottom-24 right-6
+                w-14 h-14
+                bg-[#5ACAFA]
+                rounded-full
+                flex items-center justify-center
+                drop-shadow-[0_0_10px_#5ACAFA]
+                hover:scale-105
+                transition-transform duration-300
+                z-50">
+
+        <img src="{% static 'image/Chat.svg' %}"
+            class="w-7 h-7"
+            alt="чат">
+    </a>
+    <!-- Фиксированная кнопка телефона -->
+    <a href="tel:+380990160002"
+        class="fixed bottom-6 right-6
+            w-14 h-14
+            bg-[#5ACAFA]
+          rounded-full
+          flex items-center justify-center
+          drop-shadow-[0_0_10px_#5ACAFA]
+          hover:scale-105
+          transition-transform duration-300
+          z-50">
+
+    <img src="{% static 'image/Call.svg' %}"
+         class="w-7 h-7"
+         alt="телефон">
+    </a>
     <!-- подключение видео galery.hrml -->
-    <!-- <script>
-        function setupVideo(videoId, buttonId) {
-            const video = document.getElementById(videoId);
-            const button = document.getElementById(buttonId);
-
-            if (!video || !button) return;
-
-            button.addEventListener('click', () => {
-                video.play();
-                button.style.display = 'none';
-            });
-
-            video.addEventListener('pause', () => {
-                button.style.display = 'flex';
-            });
-        }
-
-        setupVideo('video1', 'playButton1');
-        setupVideo('video2', 'playButton2');
-        setupVideo('video3', 'playButton3');
-        setupVideo('video4', 'playButton4');
-    </script> -->
     <script>
     document.querySelectorAll('.video-box').forEach((box) => {
 
@@ -141,7 +152,7 @@
 
     });
     </script>
-     <!-- подключение видео galery.hrml -->
+    <!-- подключение видео galery.hrml -->
 </body>
 
 </html>
