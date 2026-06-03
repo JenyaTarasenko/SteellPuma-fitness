@@ -5,39 +5,61 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BASIC SEO -->
+    <title>{% block title %}Фітнес-клуб Сталева Пума{% endblock %}</title>
 
-    <title>{% block title %}{{ seo_title|default:"Сталева пума" }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}Фітнес-клуб у Києві: сучасний зал, тренування, групові заняття, кардіо та силові програми. Адреса: пр-т Берестейський, 131-А. Телефон: +380636364320 {% endblock %}">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ seo_title|default:'Доставка Пиццы и Суши в Днепре' }}">
-    <meta property="og:description"
-        content="{{ seo_description|default:'Доставка Пиццы и Суши в Днепре. Закажите онлайн с быстрой доставкой за 40 минут!' }}">
+    <meta name="keywords" content="фітнес Київ, тренажерний зал Київ, Сталева Пума, спорт клуб Київ, тренування Київ">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Фітнес-клуб Сталева Пума">
+    <meta property="og:description" content="Сучасний фітнес-клуб у Києві. Тренажерний зал, кардіо, групові тренування.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
-    {% if seo_image %}
-    <meta property="og:image"
-        content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ seo_image }}{% endblock %}">
-    {% endif %}
-    <!-- Schema.org JSON-LD -->
+    <meta property="og:image" content="{% static 'favicon/og-image.jpg' %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- LOCAL BUSINESS SCHEMA (AI + GOOGLE RICH RESULTS) -->
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "{{ seo_title|default:'Мій магазин'|escapejs }}",
-        "description": "{{ seo_description|default:'Доставка піци та суші в Дніпрі. Замовте онлайн.'|escapejs }}",
-        "url": "{{ canonical_url|default:request.build_absolute_uri }}"{% if seo_image %},
-        "image": "{{ request.scheme }}://{{ request.get_host }}{{ seo_image }}"{% endif %},
+        "@type": "SportsActivityLocation",
+        "name": "Фітнес-клуб Сталева Пума",
+        "email": "jagiron@ukr.net",
+        "image": "https://your-domain.com/static/favicon/og-image.jpg",
+        "description": "Сучасний фітнес-клуб у Києві з професійним обладнанням та груповими заняттями.",
+        "url": "{{ request.build_absolute_uri }}",
+        "telephone": "+380636364320",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Dnipro",
-            "addressCountry": "Ukraine"
+            "streetAddress": "пр-т Берестейський, 131-А",
+            "addressLocality": "Київ",
+            "addressCountry": "UA"
         },
-        "openingHours": "Mo-Su 10:00-21:00",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+380 (99) 016 00 02",
-            "contactType": "Customer Service"
-        }
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.4501,
+            "longitude": 30.5234
+        },
+        "sameAs": [
+            "https://t.me/380636364320",
+            "https://maps.google.com/?q=м.+Київ,+пр-т+Берестейський,+131-А",
+            "https://www.instagram.com/staleva_puma?utm_source=qr&igsh=MWs5eGUxbTdrOXJzbg%3D%3D"
+        ]
         }
     </script>
     <!-- Google Fonts -->
@@ -76,7 +98,7 @@
     {% endblock %}
     {% include 'include/footer.html' %}
       <!-- Кнопка Чат -->
-    <a href="https://t.me/username"
+    <a href="https://t.me/+380636364320"
         target="_blank"
         class="fixed bottom-24 right-6
                 w-14 h-14
@@ -93,7 +115,7 @@
             alt="чат">
     </a>
     <!-- Фиксированная кнопка телефона -->
-    <a href="tel:+380990160002"
+    <a href="tel:+380636364320"
         class="fixed bottom-6 right-6
             w-14 h-14
             bg-[#5ACAFA]
