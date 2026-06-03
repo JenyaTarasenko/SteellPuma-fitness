@@ -1,3 +1,9 @@
 from django.contrib import admin
+from shop.models import News
 
-# Register your models here.
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields = ('title', 'description')
+
+    

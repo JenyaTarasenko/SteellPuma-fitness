@@ -143,7 +143,7 @@
 <!-- Блок 1 мобайл -->
 
 <!-- ------------------nexs---------------------- -->
-<section class="mt-20 p-5 mb-10">
+<!-- <section class="mt-20 p-5 mb-10">
     <div class="w-full h-[250px] md:h-[400px] lg:h-[500px] overflow-hidden ">
         <img src="{% static 'image/galery22.webp' %}" 
         alt="news-fon-staleva-puma" 
@@ -156,7 +156,7 @@
 
     <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
 
-        <!-- LEFT: TITLE -->
+   
         <div class="flex flex-col gap-5 ">
             <h2 class="text-3xl md:text-5xl font-bold uppercase text-[#5ACAFA]">  
                 Безкоштовні майстер-класи
@@ -177,12 +177,12 @@
           
             <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA] mt-10 mb-5">
 
-                    <!-- текст -->
+            
                     <span class="font-medium pl-8 font-manrope font-medium ">
                         Записатись
                     </span>
 
-                    <!-- чёрный круг со стрелкой -->
+              
                     <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
                         <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
@@ -194,7 +194,7 @@
          </div>
         
 
-        <!-- RIGHT: DESCRIPTION -->
+
         <p class="text-sm md:text-lg text-gray-300 max-w-xl leading-relaxed mb-5">
             Tae-bo: 18.30- 19.00<br>
             Functional training: 19.05-19.35<br>
@@ -209,6 +209,68 @@
 
     </div>
 </section>
-<hr class="border-t-2 border-[#5ACAFA] my-10 mx-10 mb-10 mt-10">
+<hr class="border-t-2 border-[#5ACAFA] my-10 mx-10 mb-10 mt-10"> -->
 <!-- ------------------nexs---------------------- -->
+{% for item in news %}
+    <section class="mt-20 p-5 mb-10">
+        <div class="w-full h-[250px] md:h-[400px] lg:h-[500px] overflow-hidden ">
+            <img src="{{ item.image.url }}" 
+            alt="{{ item.title }}" 
+            class="w-full h-full object-cover" 
+            loading="lazy">
+        </div>
+    </section>
+
+    <section class="w-full max-w-6xl mx-auto px-4">
+
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+
+    
+            <div class="flex flex-col gap-5 ">
+                <h2 class="text-3xl md:text-5xl font-bold uppercase text-[#5ACAFA]">  
+                    {{ item.title }}
+                </h2>
+
+                    <div class="flex flex-row gap-2 items-center">
+                        <a href="https://www.instagram.com/staleva_puma?utm_source=qr&igsh=MWs5eGUxbTdrOXJzbg%3D%3D" target="_blank"> 
+                            <div class="flex flex-row gap-2 items-center cursor-pointer hover:scale-105 transition ">
+                                <img src="{% static 'image/instagram.svg' %}" alt="Map-Staleva-Puma-Kyiv" class="w-10" loading="lazy">
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/"> 
+                            <div class="flex flex-row gap-2 items-center cursor-pointer hover:scale-105 transition ">
+                                <img src="{% static 'image/facebook.svg' %}" alt="Map-Staleva-Puma-Kyiv" class="w-10" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+            
+                <a href="https://t.me/+380636364320" target="_blank" class="flex items-center justify-between bg-[#5ACAFA] text-black rounded-full px-2  py-1 w-[200px] hover:scale-105 transition hover:drop-shadow-[0_0_10px_#5ACAFA] mt-10 mb-5">
+
+                
+                        <span class="font-medium pl-8 font-manrope font-medium ">
+                            Записатись
+                        </span>
+
+                
+                        <div class="w-9 h-9 bg-black rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white rotate-[-45deg]" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5 12h14M13 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+            </div>
+            
+
+
+            <p class="text-sm md:text-lg text-gray-300 max-w-xl leading-relaxed mb-5">
+                {{ item.description }}
+            </p>
+
+        </div>
+    </section>
+    <hr class="border-t-2 border-[#5ACAFA] my-10 mx-10 mb-10 mt-10">
+{% endfor %}
+
 {% endblock %}

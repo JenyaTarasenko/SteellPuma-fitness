@@ -1,5 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from shop.models import News
+
+
+def news(request):
+    news = News.objects.all()
+
+    context = {
+        'news': news
+    }
+
+    return render(
+        request,
+        'shop/product/news.html',
+        context
+    )
 
 def home(request):
     return render(request, 'shop/product/home.html')
@@ -22,8 +37,8 @@ def galery(request):
 def rules(request):
     return render(request, 'shop/product/rules.html')
 
-def news(request):
-    return render(request, 'shop/product/news.html')
+# def news(request):
+#     return render(request, 'shop/product/news.html')
 
 
 
