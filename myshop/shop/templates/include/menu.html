@@ -9,6 +9,11 @@
             <a href="/">
                 <img src="{% static 'image/logo.svg' %}" alt="logo-home" loading="eager" class="cursor-pointer w-20 sm:ml-10 pl-0">
             </a>
+            <a href="https://maps.google.com/?q=м.+Київ,+пр-т+Берестейський,+131-А" target="_blank">
+                    <img src="{% static 'image/MapMenu.svg' %}"
+                        alt="MapMenu"
+                        class="w-6 h-6 hover:scale-110 transition md:hidden mr-5">
+            </a> 
 
             <!-- DESKTOP MENU -->
             <div class="hidden md:flex flex-1 justify-center items-center relative space-x-6">
@@ -18,7 +23,12 @@
                 <a href="{% url 'shop:rozclad-zanatiy' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Розклад</a>
                 <a href="{% url 'shop:news-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Новини</a>
                 <a href="{% url 'shop:team-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Команда</a>
-                <a href="{% url 'shop:rules-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Правила</a>    
+                <a href="{% url 'shop:rules-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Правила</a>  
+                <a href="https://maps.google.com/?q=м.+Київ,+пр-т+Берестейський,+131-А" target="_blank">
+                    <img src="{% static 'image/MapMenu.svg' %}"
+                        alt="MapMenu"
+                        class="w-6 h-6 hover:scale-110 transition">
+                </a>  
             </div>
 
             <!-- BURGER BUTTON -->
@@ -40,6 +50,7 @@
     </div>
 
     <!-- MOBILE MENU -->
+
     <div id="mobile-menu"
          class="hidden md:hidden px-4 py-3 space-y-6 flex flex-col bg-black/90 items-center justify-center">
 
@@ -50,7 +61,7 @@
         <a href="{% url 'shop:news-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Новини</a>
         <a href="{% url 'shop:team-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Команда</a>
         <a href="{% url 'shop:rules-steel-puma' %}" class="text-[#5ACAFA] hover:text-white transition font-montserrat uppercase text-sm">Правила</a>
-
+       
     </div>
 
 </nav>
