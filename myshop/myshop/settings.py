@@ -8,20 +8,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-6v(@t)q6b*#2(2dd$a9(ab1uv+akqm8#z6j)5aje4tto=@imn%'
 
-DEBUG = True
 
 
 #Телеграм pip install python-telegram-bot
-LIQPAY_PUBLIC_KEY = config('LIQPAY_PUBLIC_KEY', default='')
-LIQPAY_PRIVATE_KEY = config('LIQPAY_PRIVATE_KEY', default='')
+# LIQPAY_PUBLIC_KEY = config('LIQPAY_PUBLIC_KEY', default='')
+# LIQPAY_PRIVATE_KEY = config('LIQPAY_PRIVATE_KEY', default='')
 
-DEBUG = True
+# DEBUG = True
+DEBUG = False
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://SteelPuma.pythonanywhere.com",
+]
 
 ALLOWED_HOSTS = [
     'http://127.0.0.1:8001',
     '127.0.0.1',
     'localhost',
-    'magazine.pythonanywhere.com',
+    'SteelPuma.pythonanywhere.com',
 ]
 
 
