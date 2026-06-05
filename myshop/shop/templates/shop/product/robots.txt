@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Не индексировать админку
+Disallow: /admin/
+Disallow: /login/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://SteelPuma.pythonanywhere.com/sitemap.xml

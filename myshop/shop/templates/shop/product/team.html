@@ -22,7 +22,7 @@
         <div class="max-w-2xl text-white">
             <div class="flex flex-row flex-wrap items-center mb-8 gap-4">
                 <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
-                <p class="text-sm font-normal font-manrope text-white">фітнес-клуб<span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+                <p class="text-sm font-normal font-manrope text-white">фітнес-клуб<span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;&laquo;Сталева пума&raquo;</span></p>
             </div>
             <div x-data="{ show: false }"
                 x-init="setTimeout(() => show = true, 200)">
@@ -84,10 +84,10 @@
   <div class="absolute inset-0 bg-black/40"></div>
 
   <!-- контент -->
-  <div class="relative z-10 w-full px-16 text-left text-white p-10">
+  <div class="relative z-10 w-full px-10 text-left text-white p-10">
     <div class="flex flex-row flex-wrap items-center mb-8 gap-4 mt-10">
         <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
-        <p class="text-sm font-normal font-manrope text-white"><span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+        <p class="text-sm font-normal font-manrope text-white"><span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;&laquo;Сталева пума&raquo;</span></p>
     </div>
     <div x-data="{ show: false }"
         x-init="setTimeout(() => show = true, 200)">
@@ -106,7 +106,7 @@
 
 
      <h2 class="text-xl text-gray-100 mb-8 font-manrope max-w-md font-light">
-         Створюйте тіло своєї мрії разом із професійними тренерами
+         Створюйте тіло своєї <span class="text-[#5ACAFA] font-bold">мрії </span> разом із професійними тренерами
      </h2>
 
                 <div class="flex flex-row flex-wrap gap-5">
@@ -289,7 +289,7 @@
 
 <!-- блок текст по середире --> 
 <section  class="flex justify-center items-center py-10 mt-10 p-2">
-    <h4 class="text-3xl sm:text-4xl font-normal leading-tight font-manrope text-center text-white uppercase">Спонсори<br><span class="text-[#5ACAFA] font-bold text-4xl sm:text-5xl">Сталева Пума</span></h4>
+    <h4 class="text-3xl sm:text-4xl font-normal leading-tight font-manrope text-center text-white uppercase">Спонсори<br><span class="text-[#5ACAFA] font-bold text-4xl sm:text-5xl">&laquo;Сталева Пума&raquo;</span></h4>
 </section>
 <!-- блок текст по середире -->
 
@@ -425,16 +425,99 @@
 </section>
 <!-- Блок 1 мобайл -->
 
-<section class="hidden sm:flex relative min-h-screen bg-cover bg-center mb-10"
-    style="background-image: url('/static/image/team-map.webp');">
-    <!-- затемнение -->
-    <div class="absolute inset-0 bg-black/10"></div>
-</section>
+<!-- ------------------блок1---------------------- -->
+<section class="hidden sm:flex relative min-h-screen bg-cover bg-center mb-10 mt-20 justify-center items-center"
+         style="background-image: url('/static/image/immap.webp');">
 
- <section class="block sm:hidden relative min-h-screen bg-cover bg-center mb-10"
-  style="background-image: url('/static/image/team-map2.webp');">
+    <!-- затемнение -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- контейнер -->
+    <div class="relative z-10 flex flex-col items-center gap-6">
+
+        <!-- логотип -->
+        <img src="{% static 'image/logo.svg' %}"
+             alt="Сталева Пума"
+             class="w-36 hover:scale-105 transition">
+
+        <!-- карточка -->
+        <a href="https://maps.google.com/?q=м.+Київ,+пр-т+Берестейський,+131-А" target="_blank">
+            <div class="w-[300px] h-[300px]
+                        hover:scale-105 transition
+                        bg-white/10
+                        backdrop-blur-md
+                        border border-white/20
+                        rounded-2xl
+                        p-6
+                        flex flex-col
+                        justify-center">
+
+                <h2 class="text-2xl font-bold text-[#5ACAFA] mb-4">
+                    «Сталева Пума»
+                </h2>
+
+                <p class="text-white/90 text-lg leading-relaxed font-bold">
+                    Київ<br>пр-т Берестейський, 131-А
+                </p>
+
+                <p class="text-white/90 text-xl leading-relaxed font-light">
+                    +380 (63) 636-43-20
+                </p>
+
+                <p class="text-white/90 text-sm leading-relaxed mt-10">
+                    Сучасний фітнес-клуб із новітнім обладнанням, комфортною атмосферою та всім необхідним для ефективних тренувань
+                </p>
+
+            </div>
+        </a>
+
+    </div>
+
+</section>
+<section class="block sm:hidden relative min-h-screen bg-cover bg-center mb-10"
+  style="background-image: url('/static/image/immap-mob.webp');">
   <!-- затемнение -->
   <div class="absolute inset-0 bg-black/10"></div>
+  <!-- контейнер -->
+    <div class="relative z-10 flex flex-col items-center gap-6">
+
+        <!-- логотип -->
+        <img src="{% static 'image/logo.svg' %}"
+             alt="Сталева Пума"
+             class="w-36 hover:scale-105 transition">
+
+        <!-- карточка -->
+        <a href="https://maps.google.com/?q=м.+Київ,+пр-т+Берестейський,+131-А" target="_blank">
+            <div class="w-[300px] h-[300px]
+                        hover:scale-105 transition
+                        bg-white/10
+                        backdrop-blur-md
+                        border border-white/20
+                        rounded-2xl
+                        p-6
+                        flex flex-col
+                        justify-center">
+
+                <h2 class="text-2xl font-bold text-[#5ACAFA] mb-4">
+                    «Сталева Пума»
+                </h2>
+
+                <p class="text-white/90 text-lg leading-relaxed font-bold">
+                    Київ<br>пр-т Берестейський, 131-А
+                </p>
+
+                <p class="text-white/90 text-xl leading-relaxed font-light">
+                    +380 (63) 636-43-20
+                </p>
+
+                <p class="text-white/90 text-sm leading-relaxed mt-10">
+                    Сучасний фітнес-клуб із новітнім обладнанням, комфортною атмосферою та всім необхідним для ефективних тренувань
+                </p>
+
+            </div>
+        </a>
+
+    </div>
 </section>
 
 {% endblock %}

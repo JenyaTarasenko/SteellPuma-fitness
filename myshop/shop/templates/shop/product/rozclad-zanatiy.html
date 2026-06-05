@@ -22,7 +22,7 @@
         <div class="max-w-2xl text-white">
             <div class="flex flex-row flex-wrap items-center mb-8 gap-4">
                 <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
-                <p class="text-sm font-normal font-manrope text-white">фітнес-клуб<span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+                <p class="text-sm font-normal font-manrope text-white">фітнес-клуб<span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;&laquo;Сталева пума&raquo;</span></p>
             </div>
             <div x-data="{ show: false }"
                 x-init="setTimeout(() => show = true, 200)">
@@ -84,10 +84,10 @@
   <div class="absolute inset-0 bg-black/50"></div>
 
   <!-- контент -->
-  <div class="relative z-10 w-full px-16 text-left text-white p-10">
+  <div class="relative z-10 w-full px-10 text-left text-white p-10">
     <div class="flex flex-row flex-wrap items-center mb-8 gap-4 mt-10">
         <img src="{% static 'image/logo-home.svg' %}" alt="logo-home" class="w-10" loading="eager">
-        <p class="text-sm font-normal font-manrope text-white"><span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;Сталева пума</span></p>
+        <p class="text-sm font-normal font-manrope text-white"><span class="text-[#5ACAFA] uppercase font-light">&nbsp;&nbsp;&laquo;Сталева пума&raquo;</span></p>
     </div>
     <div x-data="{ show: false }"
         x-init="setTimeout(() => show = true, 200)">
@@ -106,7 +106,7 @@
 
 
      <h2 class="text-xl text-gray-100 mb-8 font-manrope max-w-md font-light">
-        Оберіть формат тренувань, який <br>підходить саме вам.
+        Оберіть <span class="text-[#5ACAFA] font-bold">формат</span> тренувань, який <br>підходить саме вам.
      </h2>
 
                 <div class="flex flex-row flex-wrap gap-5">
