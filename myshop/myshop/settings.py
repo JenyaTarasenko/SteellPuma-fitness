@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-6v(@t)q6b*#2(2dd$a9(ab1uv+akqm8#z6j)5aje4tto=@imn%
 # LIQPAY_PUBLIC_KEY = config('LIQPAY_PUBLIC_KEY', default='')
 # LIQPAY_PRIVATE_KEY = config('LIQPAY_PRIVATE_KEY', default='')
 
-# DEBUG = True
+
 DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
@@ -28,6 +28,14 @@ ALLOWED_HOSTS = [
     'SteelPuma.pythonanywhere.com',
 ]
 
+
+# DEBUG = True  # локально
+
+# ALLOWED_HOSTS = [
+#     '*'
+# ]
+
+# CSRF_TRUSTED_ORIGINS = []
 
 # Application definition
 

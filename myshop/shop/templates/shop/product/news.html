@@ -213,13 +213,26 @@
 <!-- ------------------nexs---------------------- -->
 {% for item in news %}
     <section class="mt-20 p-5 mb-10">
+        <div class="relative w-full h-[250px] md:h-[400px] lg:h-[500px] overflow-hidden">
+
+            <img src="{{ item.image.url }}"
+                alt="{{ item.title }}"
+                class="w-full h-full object-cover"
+                loading="lazy">
+
+            <!-- затемнение -->
+            <div class="absolute inset-0 bg-black/30"></div>
+
+        </div>
+    </section>
+    <!-- <section class="mt-20 p-5 mb-10">
         <div class="w-full h-[250px] md:h-[400px] lg:h-[500px] overflow-hidden ">
             <img src="{{ item.image.url }}" 
             alt="{{ item.title }}" 
             class="w-full h-full object-cover" 
             loading="lazy">
         </div>
-    </section>
+    </section> -->
 
     <section class="w-full max-w-6xl mx-auto px-4">
 
