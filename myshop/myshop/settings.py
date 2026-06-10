@@ -19,6 +19,8 @@ DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
     "https://SteelPuma.pythonanywhere.com",
+    "https://jagiron.mk.ua",
+    "https://www.jagiron.mk.ua",
 ]
 
 ALLOWED_HOSTS = [
@@ -26,6 +28,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'SteelPuma.pythonanywhere.com',
+    'jagiron.mk.ua',
+    'www.jagiron.mk.ua',
 ]
 
 
