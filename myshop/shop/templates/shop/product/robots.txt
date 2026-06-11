@@ -7,4 +7,4 @@ Disallow: /login/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://SteelPuma.pythonanywhere.com/sitemap.xml
+Sitemap: https://www.jagiron.mk.ua/sitemap.xml

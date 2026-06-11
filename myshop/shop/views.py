@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from shop.models import News
 
-
-
 def robots_txt(request):
     content = """User-agent: *
 Allow: /
@@ -12,7 +10,7 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /api/
 
-Sitemap: https://SteelPuma.pythonanywhere.com/sitemap.xml
+Sitemap: https://www.jagiron.mk.ua/sitemap.xml
 """
     return HttpResponse(content, content_type="text/plain")
 
@@ -57,7 +55,7 @@ def rules(request):
 
 
 
-from django.http import HttpResponse
+
 
 def llms_txt(request):
     content = """# Staleva Puma Fitness Club (Kyiv)
