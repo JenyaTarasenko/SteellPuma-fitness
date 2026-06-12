@@ -18,16 +18,11 @@ SECRET_KEY = 'django-insecure-6v(@t)q6b*#2(2dd$a9(ab1uv+akqm8#z6j)5aje4tto=@imn%
 DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://SteelPuma.pythonanywhere.com",
     "https://jagiron.mk.ua",
     "https://www.jagiron.mk.ua",
 ]
 
 ALLOWED_HOSTS = [
-    'http://127.0.0.1:8001',
-    '127.0.0.1',
-    'localhost',
-    'SteelPuma.pythonanywhere.com',
     'jagiron.mk.ua',
     'www.jagiron.mk.ua',
 ]
@@ -61,8 +56,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',  #важно для статики pip install whitenoise
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-
-
+    # "shop.middleware.WWWRedirectMiddleware", #для риддерикт shop.middleware.py  редирект с www.jagiron.mk.ua на jagiron.mk.ua
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

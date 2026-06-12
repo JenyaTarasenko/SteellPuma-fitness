@@ -1,12 +1,27 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
-{% block content %}
+
 {% block title %}Правила | Сталева Пума{% endblock %}
 
 {% block description %}
 Професійна команда тренерів фітнес-клубу Сталева Пума в Києві. Досвідчені спеціалісти з силових тренувань, фітнесу та реабілітації.
 {% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Правила фітнес-клубу Сталева Пума",
+  "url": "https://jagiron.mk.ua/rules-steel-puma/",
+  "description": "Правила фітнес-клубу Сталева Пума у Києві.",
+  "image": "https://jagiron.mk.ua/static/favicon/og-image.jpg"
+}
+</script>
+{% endblock %}
+
+{% block content %}
 <!-- ------------------блок1---------------------- -->
 <!-- Блок 1 дестоп -->
 <section class="hidden md:flex relative min-h-screen bg-cover bg-center"

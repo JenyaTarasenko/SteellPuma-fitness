@@ -1,12 +1,30 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
-{% block content %}
+
 {% block title %}Галерея тренувань | Сталева Пума{% endblock %}
 
 {% block description %}
 Фото та відео з тренувань у фітнес-клубі Сталева Пума в Києві.
 {% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Галерея фітнес-клубу Сталева Пума",
+  "description": "Фото тренажерної зали, групових занять, тренувань та атмосфери фітнес-клубу Сталева Пума у Києві.",
+  "url": "https://jagiron.mk.ua/galery-steel-puma/",
+  "image": "https://jagiron.mk.ua/static/favicon/og-image.jpg",
+  "publisher": {
+    "@type": "SportsActivityLocation",
+    "name": "Фітнес-клуб Сталева Пума"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
 <!-- ------------------блок1---------------------- -->
 <!-- Блок 1 дестоп -->
 <section class="hidden md:flex relative min-h-screen bg-cover bg-center"

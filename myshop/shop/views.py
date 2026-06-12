@@ -10,7 +10,7 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /api/
 
-Sitemap: https://www.jagiron.mk.ua/sitemap.xml
+Sitemap: https://jagiron.mk.ua/sitemap.xml
 """
     return HttpResponse(content, content_type="text/plain")
 

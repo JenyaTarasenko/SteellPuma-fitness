@@ -7,4 +7,4 @@ Disallow: /login/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://www.jagiron.mk.ua/sitemap.xml
+Sitemap: https://jagiron.mk.ua/sitemap.xml

@@ -1,12 +1,110 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
-{% block content %}
+
 {% block title %}Команда тренерів | Сталева Пума{% endblock %}
 
 {% block description %}
 Професійна команда тренерів фітнес-клубу Сталева Пума в Києві. Досвідчені спеціалісти з силових тренувань, фітнесу та реабілітації.
 {% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "url": "https://jagiron.mk.ua/team-steel-puma/",
+  "image": "https://jagiron.mk.ua/static/favicon/og-image.jpg",
+  "name": "Професійна тренерська команда Сталева Пума",
+  "itemListElement": [
+
+    {
+      "@type": "Person",
+      "name": "Андрій Іванченко",
+      "jobTitle": "Тренер тренажерної зали, персональний тренер",
+      "worksFor": {
+        "@type": "SportsActivityLocation",
+        "name": "Сталева Пума"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Яна Снісаренко",
+      "jobTitle": "Хелс-коуч",
+      "sameAs": "https://instagram.com/"
+    },
+    {
+      "@type": "Person",
+      "name": "Сергій Бахмутський",
+      "jobTitle": "Тренер тренажерної зали, персональний тренер",
+      "worksFor": {
+        "@type": "SportsActivityLocation",
+        "name": "Сталева Пума"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Ольга Дружиніна",
+      "jobTitle": "Тренер групових програм, персональний тренер",
+      "worksFor": {
+        "@type": "SportsActivityLocation",
+        "name": "Сталева Пума"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Маргарита Гелевера",
+      "jobTitle": "Тренер тренажерної зали, персональний тренер",
+      "worksFor": {
+        "@type": "SportsActivityLocation",
+        "name": "Сталева Пума"
+      }
+    }
+
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Партнери Сталева Пума",
+  "url": "https://jagiron.mk.ua/team-steel-puma/",
+  "image": "https://jagiron.mk.ua/static/favicon/og-image.jpg",
+  "itemListElement": [
+
+    {
+      "@type": "Organization",
+      "name": "Fitnessport",
+      "description": "Український інтернет-магазин тренажерів та обладнання"
+    },
+    {
+      "@type": "Organization",
+      "name": "GumOK",
+      "description": "Виробник гумових покриттів для спортзалів"
+    },
+    {
+      "@type": "Organization",
+      "name": "Сталева Пума",
+      "description": "Відновлені тренажери світових брендів, робота з 2001 року"
+    },
+    {
+      "@type": "Organization",
+      "name": "MARS WEB Studio",
+      "url": "https://www.web-mars.com/",
+      "sameAs": [
+        "https://www.instagram.com/mars_web_studio/"
+      ],
+      "description": "Розробка сайтів під ключ для бізнесу: лендинги, корпоративні сайти, e-commerce, UI/UX дизайн, SEO та веб-розробка"
+    }
+
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
 <!-- ------------------блок1---------------------- -->
 <!-- Блок 1 дестоп -->
 <section class="hidden md:flex relative min-h-screen bg-cover bg-center"
@@ -289,72 +387,64 @@
 
 <!-- блок текст по середире --> 
 <section  class="flex justify-center items-center py-10 mt-10 p-2">
-    <h4 class="text-3xl sm:text-4xl font-normal leading-tight font-manrope text-center text-white uppercase">Спонсори<br><span class="text-[#5ACAFA] font-bold text-4xl sm:text-5xl">&laquo;Сталева Пума&raquo;</span></h4>
+    <h4 class="text-3xl sm:text-4xl font-normal leading-tight font-manrope text-center text-white uppercase">Партнери<br><span class="text-[#5ACAFA] font-bold text-4xl sm:text-5xl">&laquo;Сталева Пума&raquo;</span></h4>
 </section>
 <!-- блок текст по середире -->
 
 <!-- ------------------блок4---------------------- -->
 <!-- Блок 1 дестоп -->
+
 <section class="hidden md:flex relative min-h-screen bg-cover bg-center items-center justify-center"
     style="background-image: url('/static/image/team-top-des.webp');">
 
     <!-- затемнение -->
     <div class="absolute inset-0 bg-black/60"></div>
-    <!-- текст -->
-    <div class="flex flex-row flex-wrap mb-8 max-w-8xl z-10 gap-10 items-center justify-center">
+
+    <div class="z-10 flex flex-col items-center gap-10">
+
+        <!-- ROW 1 (3 cards) -->
+        <div class="flex flex-wrap justify-center gap-10">
+
             <!-- card 1 -->
-        <div class="flex flex-col items-start text-left max-w-[300px]">
-
-            <!-- image -->
-            <img src="/static/image/sponsor1.webp" 
-                alt="card"
-                class="max-w-[300px] h-[200px]  object-cover" loading="lazy">
-
-            <!-- content -->
-            <div class="text-white">
-
-                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+            <div class="flex flex-col items-start text-left max-w-[300px]">
+                <img src="/static/image/sponsor1.webp" class="w-[300px] h-[200px] object-cover" loading="lazy">
+                <p class="text-xs text-white font-manrope mt-[20px]">
                     Працюємо з 2001 року. Найбільший в Україні асортимент відновлених тренажерів найкращіх світових виробників: Precor, Texnogym, Life fitness, Cubex, Star trac. Пропонуємо продажу вживаних тренажерів у лізинг, що є унікальною послугою для ринку України.
                 </p>
-
             </div>
 
-        </div>  
-        <!-- card2 -->
-        <div class="flex flex-col items-start text-left max-w-[300px]">
-
-            <!-- image -->
-            <img src="/static/image/sponsor2.webp" 
-                alt="card"
-                class="max-w-[300px] h-[200px] object-cover" loading="lazy">
-
-            <!-- content -->
-            <div class="text-white">
-
-                <p class="text-xs font-manrope font-light max-w-[300px] mt-[27px]">
+            <!-- card 2 -->
+            <div class="flex flex-col items-start text-left max-w-[300px]">
+                <img src="/static/image/sponsor2.webp" class="w-[300px] h-[200px] object-cover" loading="lazy">
+                <p class="text-xs text-white font-manrope mt-[27px]">
                     Fitnessport - український інтернет-магазин, що спеціалізується на продажу всіх видів тренажерів та обладнання відомих зарубіжних та українських брендів: BODYSOLID, HOIST, STAR TRAC, PRECOR , MATRIX, NAUTILUS, INTER ATLETICA.
                 </p>
-
             </div>
-        </div> 
-        <!-- card3 -->
-          <!-- card2 -->
-        <div class="flex flex-col items-start text-left max-w-[300px]">
 
-            <!-- image -->
-            <img src="/static/image/sponsor3.webp" 
-                alt="card"
-                class="max-w-[350px] h-[200px] object-cover" loading="lazy">
-
-            <!-- content -->
-            <div class="text-white">
-                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+            <!-- card 3 -->
+            <div class="flex flex-col items-start text-left max-w-[300px]">
+                <img src="/static/image/sponsor3.webp" class="w-[350px] h-[200px] object-cover" loading="lazy">
+                <p class="text-xs text-white font-manrope mt-[20px]">
                     GumOK — український виробник якісної гумової плитки, створеної за технологією холодного пресування. Ми виготовляємо покриття з екологічно переробленої гумової крихти, що забезпечує високу міцність, амортизацію та довговічність у спортивному й побутовому використанні.
                 </p>
             </div>
-        </div> 
-        <!-- card3 -->
+
+        </div>
+
+        <!-- ROW 2 (1 card centered) -->
+        <div class="flex justify-center">
+
+            <div class="flex flex-col items-start text-left max-w-[300px]">
+                <img src="/static/image/mars.svg" class="object-cover" loading="lazy">
+                <p class="text-xs text-white font-manrope mt-[20px]">
+                    Розробка сайтів під ключ для вашого бізнесу унікальний дизайн, верстка, програмування на Django та Next.js, Landing Page та багатосторінкові сайти, UI/UX, SEO-оптимізація
+                </p>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 <!-- Блок 1 дестоп -->
 <!-- Блок 1 мобайл -->
@@ -365,7 +455,7 @@
     <div class="absolute inset-0 bg-black/60"></div>
 
      <!-- текст -->
-    <div class="flex flex-col flex-wrap mb-8 max-w-lg z-10 gap-20 items-center justify-centerz p-5">
+    <div class="flex flex-col mb-8 max-w-full z-10 gap-8 items-center justify-center p-5 overflow-hidden">
             <!-- card 1 -->
         <div class="flex flex-col items-start text-left max-w-[300px]">
 
@@ -414,6 +504,22 @@
             <div class="text-white">
                 <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
                     GumOK — український виробник якісної гумової плитки, створеної за технологією холодного пресування. Ми виготовляємо покриття з екологічно переробленої гумової крихти, що забезпечує високу міцність, амортизацію та довговічність у спортивному й побутовому використанні.
+                </p>
+            </div>
+        </div> 
+        <!-- card3 -->
+           <!-- card2 -->
+        <div class="flex flex-col items-start text-left max-w-[300px]">
+
+          
+            <img src="/static/image/mars2.svg" 
+                alt="card"
+                class="object-cover" loading="lazy">
+
+            <!-- content -->
+            <div class="text-white">
+                <p class="text-xs font-manrope font-light max-w-[300px] mt-[20px]">
+                    Розробка сайтів під ключ для вашого бізнесу унікальний дизайн, верстка, програмування на Django та Next.js, Landing Page та багатосторінкові сайти, UI/UX, SEO-оптимізація
                 </p>
             </div>
         </div> 

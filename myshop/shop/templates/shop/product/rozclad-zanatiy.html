@@ -1,12 +1,118 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
-{% block content %}
+
 {% block title %}Розклад занять | Сталева Пума{% endblock %}
 
 {% block description %}
 Актуальний розклад тренувань у фітнес-клубі Сталева Пума в Києві: групові заняття, персональні тренування та графік залу.
 {% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Розклад занять Сталева Пума",
+  "url": "https://jagiron.mk.ua/rozclad-zanatiy/",
+   "image": "https://jagiron.mk.ua/static/favicon/og-image.jpg",
+  "itemListElement": [
+    {
+      "@type": "Event",
+      "name": "FITMIX",
+      "dayOfWeek": "Monday",
+      "startTime": "18:00",
+      "endTime": "18:50",
+      "location": {
+        "@type": "SportsActivityLocation",
+        "name": "Сталева Пума"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "STRETCHING",
+      "dayOfWeek": "Monday",
+      "startTime": "19:00",
+      "endTime": "19:50"
+    },
+    {
+      "@type": "Event",
+      "name": "PILATES mat work",
+      "dayOfWeek": "Monday",
+      "startTime": "20:00",
+      "endTime": "20:50"
+    },
+
+    {
+      "@type": "Event",
+      "name": "PILATES therapy",
+      "dayOfWeek": "Tuesday",
+      "startTime": "10:00",
+      "endTime": "10:50"
+    },
+    {
+      "@type": "Event",
+      "name": "FITMIX",
+      "dayOfWeek": "Tuesday",
+      "startTime": "11:00",
+      "endTime": "11:50"
+    },
+    {
+      "@type": "Event",
+      "name": "STRETCHING",
+      "dayOfWeek": "Tuesday",
+      "startTime": "12:00",
+      "endTime": "12:50"
+    },
+
+    {
+      "@type": "Event",
+      "name": "LOWER BODY",
+      "dayOfWeek": "Wednesday",
+      "startTime": "18:00",
+      "endTime": "18:50"
+    },
+    {
+      "@type": "Event",
+      "name": "STRETCHING",
+      "dayOfWeek": "Wednesday",
+      "startTime": "19:00",
+      "endTime": "19:50"
+    },
+    {
+      "@type": "Event",
+      "name": "PILATES therapy",
+      "dayOfWeek": "Wednesday",
+      "startTime": "20:00",
+      "endTime": "20:50"
+    },
+
+    {
+      "@type": "Event",
+      "name": "UPPER BODY",
+      "dayOfWeek": "Friday",
+      "startTime": "07:00",
+      "endTime": "07:50"
+    },
+    {
+      "@type": "Event",
+      "name": "STRETCHING",
+      "dayOfWeek": "Friday",
+      "startTime": "19:00",
+      "endTime": "19:50"
+    },
+    {
+      "@type": "Event",
+      "name": "PILATES mat work",
+      "dayOfWeek": "Friday",
+      "startTime": "20:00",
+      "endTime": "20:50"
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
 <!-- ------------------блок1---------------------- -->
 <!-- Блок 1 дестоп -->
 <section class="hidden md:flex relative min-h-screen bg-cover bg-center"

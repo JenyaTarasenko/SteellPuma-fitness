@@ -1,12 +1,159 @@
 {% extends "shop/base.html" %}
 {% load static %}
-
-{% block content %}
 {% block title %}Ціни | Фітнес-клуб Сталева Пума{% endblock %}
 
 {% block description %}
 Актуальні ціни на абонементи та персональні тренування у фітнес-клубі Сталева Пума в Києві. Доступні тарифи для всіх рівнів підготовки.
 {% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "Ціни фітнес-клубу Сталева Пума Київ",
+  "url": "https://jagiron.mk.ua/price-steel-puma/",
+  "image": "https://jagiron.mk.ua/static/favicon/og-image.jpg",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "name": "Разове відвідування тренажерної зали",
+      "price": "200",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент 1 місяць",
+      "price": "1300",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Абонемент 10 занять (07:00-16:00)",
+      "price": "850",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Абонемент 10 занять (16:00-22:00)",
+      "price": "950",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент 3 місяці",
+      "price": "3600",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент 6 місяців",
+      "price": "6700",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент 12 місяців",
+      "price": "12500",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Разове персональне тренування",
+      "price": "600",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Абонемент на 6 персональних занять",
+      "price": "3400",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Абонемент на 8 персональних занять",
+      "price": "4300",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Абонемент на 12 персональних занять",
+      "price": "6100",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Групове заняття (разове відвідування)",
+      "price": "300",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "12 групових занять (1 місяць)",
+      "price": "2300",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "10 групових занять (1 місяць)",
+      "price": "2000",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "8 групових занять (1 місяць)",
+      "price": "1700",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент на групові заняття (1 місяць)",
+      "price": "2800",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент на групові заняття (3 місяці)",
+      "price": "7800",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент на групові заняття (6 місяців)",
+      "price": "14300",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Безлімітний абонемент на групові заняття (12 місяців)",
+      "price": "25100",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Комбінований абонемент: 8 групових + 8 тренажерна зала",
+      "price": "2200",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Комбінований абонемент: 8 групових + 10 тренажерна зала",
+      "price": "2400",
+      "priceCurrency": "UAH"
+    },
+    {
+      "@type": "Offer",
+      "name": "Комбінований абонемент: 10 групових + 8 тренажерна зала",
+      "price": "2650",
+      "priceCurrency": "UAH"
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
 <!-- ------------------блок1---------------------- -->
 <!-- Блок 1 дестоп -->
 <section class="hidden md:flex relative min-h-screen bg-cover bg-center"
@@ -401,7 +548,7 @@
 
                 <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
 
-                    Абонемент <br><span class="font-light text-sm ">[  6 персональних занят  ]</span>
+                    Абонемент <br><span class="font-light text-sm ">[  6 персональних занять  ]</span>
                 </h3>
                 <p class="text-white text-sm font-normal leading-tight mt-2">[ або тренувань у міні групах (2-3 людини) з тренером (спліт), на 1 місяць]</p>
               
@@ -442,7 +589,7 @@
 
                 <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
 
-                    Абонемент <br><span class="font-light text-sm ">[  8 персональних занят  ]</span>
+                    Абонемент <br><span class="font-light text-sm ">[  8 персональних занять  ]</span>
                 </h3>
                 <p class="text-white text-sm font-normal leading-tight mt-2">[ або тренувань у міні групах (2-3 людини) з тренером (спліт), на 1 місяць]</p>
               
@@ -467,7 +614,7 @@
                 <h4 class="text-white text-4xl font-bold leading-tight uppercase">
                     3400 <span class="text-sm">грн</span>
                 </h4>
-                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 3 людини - 23400 грн. вказана вартість з 1 людини ]</p>
+                 <p class="text-white text-xs font-normal leading-tight mt-2">[ 3 людини - 3400 грн. вказана вартість з 1 людини ]</p>
             </div>
         </div>
          <!-- card 11-->
@@ -475,7 +622,7 @@
 
             <!-- кружок -->
             <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
-                <span class="text-black text-xl font-bold">12</span>
+                <span class="text-black text-xl font-bold">11</span>
             </div>
 
                <!-- текст -->
@@ -483,7 +630,7 @@
 
                 <h3 class="text-[#5ACAFA] text-xl font-bold leading-tight uppercase font-montserrat">
 
-                    Абонемент <br><span class="font-light text-sm ">[  8 персональних занят  ]</span>
+                    Абонемент <br><span class="font-light text-sm ">[  8 персональних занять  ]</span>
                 </h3>
                 <p class="text-white text-sm font-normal leading-tight mt-2">[ або тренувань у міні групах (2-3 людини) з тренером (спліт), на 1 місяць]</p>
               
@@ -517,7 +664,7 @@
 
             <!-- кружок -->
             <div class="w-14 h-14 rounded-full bg-[#5ACAFA] flex items-center justify-center">
-                <span class="text-black text-xl font-bold">13</span>
+                <span class="text-black text-xl font-bold">12</span>
             </div>
 
             <!-- текст -->
