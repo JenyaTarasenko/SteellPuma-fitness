@@ -52,6 +52,9 @@ def rules(request):
 # def news(request):
 #     return render(request, 'shop/product/news.html')
 
+def custom_404(request, exception):
+    return render(request, "shop/product/404.html", status=404)
+
 
 
 

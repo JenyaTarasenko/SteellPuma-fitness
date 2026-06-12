@@ -13,7 +13,6 @@ sitemaps = {
 app_name = 'shop'
 
 
-
 urlpatterns = [
     path('', views.home, name='home'),# главная страница 
     path('rozclad-zanatiy/', views.rozclad_zanatiy, name='rozclad-zanatiy'),# страница расписаните занятий 
@@ -26,7 +25,7 @@ urlpatterns = [
     
     path("llms.txt",views.llms_txt, name="llms_txt"),#llms txt
     path("robots.txt",views.robots_txt, name="robots_txt"),#robots txt
-    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}),#sitemap.xml
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),#sitemap.xml
     
 
 ]
