@@ -592,46 +592,45 @@
     </div>
 
 </section>
-<section class="block sm:hidden relative min-h-screen bg-cover bg-center mb-10"
+
+<section class="block sm:hidden relative min-h-screen bg-cover bg-center"
   style="background-image: url('/static/image/immap-mob.webp');">
   <!-- затемнение -->
   <div class="absolute inset-0 bg-black/10"></div>
   <!-- контейнер -->
-    <div class="relative z-10 flex flex-col items-center gap-6">
+    <div class="relative z-10 flex flex-col items-center gap-4">
 
         <!-- логотип -->
         <img src="{% static 'image/logo.svg' %}"
              alt="Сталева Пума"
-             class="w-36 hover:scale-105 transition">
+             class="w-36">
 
         <!-- карточка -->
         <a href="https://maps.google.com/?q=м.+Київ,+пр-т+Берестейський,+131-А" target="_blank">
-            <div class="w-[300px] h-[300px]
-                        hover:scale-105 transition
+            <div class="w-[300px] py-6 
                         bg-white/10
                         backdrop-blur-md
                         border border-white/20
                         rounded-2xl
                         p-6
                         flex flex-col
-                        justify-center">
+                        justify-center gap-4 mt-5">
 
-                <h2 class="text-2xl font-bold text-[#5ACAFA] mb-4">
+                <h2 class="text-md font-bold text-[#5ACAFA]">
                     «Сталева Пума»
                 </h2>
 
-                <p class="text-white/90 text-lg leading-relaxed font-bold">
+                <p class="text-white/90 text-sm leading-relaxed font-bold">
                     Київ<br>пр-т Берестейський, 131-А
                 </p>
 
-                <p class="text-white/90 text-xl leading-relaxed font-light">
+                <p class="text-white/90 text-sm leading-relaxed font-light">
                     +380 (63) 636-43-20
                 </p>
 
-                <p class="text-white/90 text-sm leading-relaxed mt-10">
+                <p class="text-white/90 text-xs leading-relaxed">
                     Сучасний фітнес-клуб із новітнім обладнанням, комфортною атмосферою та всім необхідним для ефективних тренувань
                 </p>
-
             </div>
         </a>
 
