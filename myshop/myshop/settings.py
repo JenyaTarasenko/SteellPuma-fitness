@@ -1,6 +1,6 @@
 
 
-from decouple import config
+
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,11 +8,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-6v(@t)q6b*#2(2dd$a9(ab1uv+akqm8#z6j)5aje4tto=@imn%'
 
-
-
-#Телеграм pip install python-telegram-bot
-# LIQPAY_PUBLIC_KEY = config('LIQPAY_PUBLIC_KEY', default='')
-# LIQPAY_PRIVATE_KEY = config('LIQPAY_PRIVATE_KEY', default='')
 
 
 DEBUG = False
@@ -35,6 +30,9 @@ ALLOWED_HOSTS = [
 # ]
 
 # CSRF_TRUSTED_ORIGINS = []
+
+
+
 
 # Application definition
 
